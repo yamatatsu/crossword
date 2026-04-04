@@ -21,11 +21,17 @@ Then("クロスワードグリッドが表示されている", async ({ page }) 
 });
 
 Then("{string} のヒントが表示されている", async ({ page }, title: string) => {
+	const sheet = page.locator("[data-slot='sheet-content']");
+	if (!(await sheet.isVisible())) {
+		await page.getByRole("button", { name: "Clues" }).click();
+	}
 	await expect(page.getByText(title, { exact: true })).toBeVisible();
 });
 
 When("グリッドの白いセルをクリックする", async ({ page }) => {
-	const cell = page.locator("[data-testid='crossword-grid'] .cursor-pointer").first();
+	const cell = page
+		.locator("[data-testid='crossword-grid'] .cursor-pointer")
+		.first();
 	await cell.click();
 });
 
@@ -38,13 +44,13 @@ When("{string} ボタンをクリックする", async ({ page }, label: string) 
 });
 
 Then("セルに {string} が表示されている", async ({ page }, letter: string) => {
-	const cell = page.locator("[data-testid='crossword-grid'] .cursor-pointer span.text-lg");
-	const texts = await cell.allTextContents();
+	const cells = page.locator("[data-testid='cell-letter']");
+	const texts = await cells.allTextContents();
 	expect(texts.some((t) => t.includes(letter))).toBe(true);
 });
 
 Then("すべてのセルが空になっている", async ({ page }) => {
-	const cells = page.locator("[data-testid='crossword-grid'] .cursor-pointer span.text-lg");
+	const cells = page.locator("[data-testid='cell-letter']");
 	const texts = await cells.allTextContents();
 	expect(texts.every((t) => t.trim() === "")).toBe(true);
 });

@@ -6,12 +6,12 @@ import { puzzleRoute } from "./routes/puzzle.$date";
 const routeTree = rootRoute.addChildren([indexRoute, puzzleRoute]);
 
 export const router = createRouter({
-	routeTree,
-	basepath: import.meta.env.BASE_URL,
+  routeTree,
+  basepath: import.meta.env.BASE_URL,
 });
 
 declare module "@tanstack/react-router" {
-	interface Register {
-		router: typeof router;
-	}
+  interface Register {
+    router: typeof router;
+  }
 }
