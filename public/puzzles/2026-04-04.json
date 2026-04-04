@@ -1,0 +1,16 @@
+{
+  "date": "2026-04-04",
+  "size": { "rows": 9, "cols": 7 },
+  "words": [
+    { "id": 1, "word": "STORM", "clue": "A violent weather disturbance", "row": 0, "col": 0, "direction": "across" },
+    { "id": 2, "word": "BRIGHT", "clue": "Shining with strong light", "row": 4, "col": 0, "direction": "across" },
+    { "id": 3, "word": "SCRUB", "clue": "To clean by rubbing hard", "row": 0, "col": 0, "direction": "down" },
+    { "id": 4, "word": "TIGER", "clue": "Striped big cat native to Asia", "row": 0, "col": 1, "direction": "down" },
+    { "id": 5, "word": "OKAPI", "clue": "African mammal related to the giraffe", "row": 0, "col": 2, "direction": "down" },
+    { "id": 6, "word": "RUING", "clue": "Feeling regret about something", "row": 0, "col": 3, "direction": "down" },
+    { "id": 7, "word": "MARCH", "clue": "To walk with regular steps, or the third month", "row": 0, "col": 4, "direction": "down" },
+    { "id": 8, "word": "THINK", "clue": "To use the mind to form ideas", "row": 4, "col": 5, "direction": "down" },
+    { "id": 9, "word": "SKIN", "clue": "The outer covering of the body", "row": 6, "col": 3, "direction": "across" },
+    { "id": 10, "word": "BREAK", "clue": "To separate into pieces, or a pause", "row": 8, "col": 1, "direction": "across" }
+  ]
+}
