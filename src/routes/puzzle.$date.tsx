@@ -13,7 +13,7 @@ export const puzzleRoute = createRoute({
 	path: "/puzzle/$date",
 	component: PuzzleRoute,
 	loader: async ({ params }): Promise<PuzzleData> => {
-		const res = await fetch(`/puzzles/${params.date}.json`);
+		const res = await fetch(`${import.meta.env.BASE_URL}puzzles/${params.date}.json`);
 		if (!res.ok) throw new Error("Puzzle not found");
 		return res.json();
 	},
