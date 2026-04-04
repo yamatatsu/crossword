@@ -7,6 +7,8 @@ description: Generate a high-quality English crossword puzzle and save it as a v
 
 Generate an English crossword puzzle with 10 words, writing a validated JSON file to `public/puzzles/{YYYY-MM-DD}.json`.
 
+**Important**: Dates must always be in JST (Japan Standard Time, UTC+9). When calculating "today" or "tomorrow", use JST regardless of the system timezone.
+
 ## Workflow
 
 ### Step 1: Read Quality Guidelines

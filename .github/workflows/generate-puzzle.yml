@@ -19,16 +19,19 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
+      - name: Calculate tomorrow's date in JST
+        id: date
+        run: echo "puzzle_date=$(TZ=Asia/Tokyo date -d '+1 day' +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
       - name: Generate puzzle with Claude Code
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: |
-            Generate a new crossword puzzle for tomorrow's date using the /generate-crossword skill.
+            Generate a new crossword puzzle for ${{ steps.date.outputs.puzzle_date }} using the /generate-crossword skill.
 
-            Calculate tomorrow's date from today.
             Follow the skill's 7-step workflow to create a high-quality puzzle.
-            After validation passes, commit with message "puzzle: add {date} daily puzzle".
+            After validation passes, commit with message "puzzle: add ${{ steps.date.outputs.puzzle_date }} daily puzzle".
 
       - name: Push changes
         run: |
