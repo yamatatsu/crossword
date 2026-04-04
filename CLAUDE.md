@@ -72,7 +72,7 @@ const { Given, When, Then } = createBdd();
 
 ## Daily Puzzle Generation (GitHub Actions)
 
-- `.github/workflows/generate-puzzle.yml` で毎日UTC 0時に実行
+- `.github/workflows/generate-puzzle.yml` で毎日JST 0時（UTC 15時）に実行
 - Claude Code Actionでパズルを生成し、`scripts/validate-puzzle.ts` で検証後コミット
 - `ANTHROPIC_API_KEY` シークレットが必要
 
