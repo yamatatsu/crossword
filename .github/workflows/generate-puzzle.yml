@@ -44,5 +44,9 @@ jobs:
             exit 1
           fi
           git add "$PUZZLE_FILE"
-          git commit -m "puzzle: add ${{ steps.date.outputs.puzzle_date }} daily puzzle"
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit for $PUZZLE_FILE"
+          else
+            git commit -m "puzzle: add ${{ steps.date.outputs.puzzle_date }} daily puzzle"
+            git push
+          fi
