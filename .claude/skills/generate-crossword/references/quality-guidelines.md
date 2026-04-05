@@ -1,11 +1,12 @@
 # Crossword Puzzle Quality Guidelines
 
 ## Table of Contents
-1. Word Selection
-2. Clue Writing
+1. Word Selection (includes Crosswordese Blacklist)
+2. Clue Writing (includes Grammatical Matching)
 3. Grid Design
 4. Theme & Cohesion
 5. Difficulty Calibration
+6. The Natick Principle
 
 ---
 
@@ -25,6 +26,13 @@
 - Plurals or verb forms added solely to fit the grid (-ING, -TION padding)
 - More than 2 three-letter words (too many short words feel cheap)
 
+### Crosswordese Blacklist
+These words appear far more in crosswords than in everyday English. Do not use them:
+
+ERNE, ESNE, OLEO, ASTA, YSER, ARETE, ORLE, STOA, EPEE, ANOA, OAST, ASEA, SMEE, NENE, ETUI, PROA
+
+If you find yourself reaching for one of these, choose a more natural word instead.
+
 ### Intersection-Friendly Letters
 When choosing words, prefer those with vowels and common consonants at positions likely to intersect. Letters like J, Q, X, Z make intersection extremely difficult.
 
@@ -37,14 +45,18 @@ When choosing words, prefer those with vowels and common consonants at positions
 - **Concise.** Under 80 characters. Every word earns its place.
 - **No direct repetition of the answer word** in the clue text.
 
-### Clue Types (mix these for variety)
-| Type | Example (Answer: BRIDGE) |
-|------|--------------------------|
-| Definition | "Structure spanning a river" |
-| Fill-in-blank | "London ___ is falling down" |
-| Synonym | "Span or overpass" |
-| Associative | "Card game for four players" |
-| Wordplay/double meaning | "Dental work or a river crossing" |
+### Clue Types (use at least 4 different types per puzzle)
+| Type | Example | Notes |
+|------|---------|-------|
+| Definition | "Structure spanning a river" (BRIDGE) | Straightforward meaning |
+| Fill-in-blank | "London ___ is falling down" (BRIDGE) | Very solver-friendly |
+| Synonym | "Span or overpass" (BRIDGE) | Keep it concise |
+| Associative | "Card game for four players" (BRIDGE) | Secondary meaning |
+| Double definition | "Pitch / Tar" (BLACK) | Two distinct definitions in one clue |
+| Wordplay/misdirection | "Pitcher's asset?" (ARM) | Question mark signals non-literal meaning |
+| Quote clue | '"Can\'t be done!"' (NOWAY) | Dialogue the answer represents |
+| Example clue | "Atlantic, e.g." (OCEAN) | "e.g." or "for one" signals a category |
+| Abbreviation clue | "D.C. setting: Abbr." (GOV) | Must signal with "Abbr." or an abbreviation in the clue |
 
 ### Good vs Bad Clues
 | Quality | Clue for APPLE |
@@ -55,8 +67,16 @@ When choosing words, prefer those with vowels and common consonants at positions
 | Bad | "Red or green thing" (could be anything) |
 | Bad | "APPLE" (never repeat the answer) |
 
-### Rules
-- Clue and answer must match grammatically (if clue implies plural, answer is plural)
+### Grammatical Matching (Mandatory)
+
+This is non-negotiable. The clue and answer must agree in:
+- **Number**: Plural answer → plural clue. "Ocean vessels" → SHIPS (not SHIP)
+- **Tense**: Past tense answer → past tense clue. "Traveled on horseback" → RODE (not RIDE)
+- **Part of speech**: Noun answer → noun-oriented clue. Verb answer → verb-oriented clue.
+
+A clue that says "Run" for WALKED is wrong on two counts (tense and specific meaning).
+
+### Other Rules
 - Avoid "A ___" or "The ___" as clue starters unless it's a fill-in-blank
 - Use question marks for puns or misdirection: "Good with numbers?" → ACCOUNTANT
 
@@ -110,3 +130,15 @@ Not every puzzle needs a theme. A well-constructed themeless puzzle with interes
 | Word frequency | HOUSE | ABODE |
 | Clue type | Definition | Wordplay/misdirection |
 | Grid density | More intersections (more cross-checking letters) | Fewer intersections |
+
+---
+
+## 6. The Natick Principle
+
+Never cross two obscure proper nouns (or two obscure entries of any kind) at the same square. The solver cannot deduce the crossing letter if both entries are unfamiliar.
+
+**Rule**: If a word is uncommon (a lesser-known proper noun, a foreign word, a technical term), every letter in that word must be crossable through common, inferrable words.
+
+**Example violation**: NIDAL crossing AALII at the 'A' — a solver who knows neither word cannot determine the letter.
+
+**Example fix**: Cross NIDAL with NASAL, RIDER, DANCE — all common words where the crossing letter is obvious.

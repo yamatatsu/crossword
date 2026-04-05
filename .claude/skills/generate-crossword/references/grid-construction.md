@@ -2,8 +2,8 @@
 
 ## Table of Contents
 1. Overview
-2. Step-by-Step Process
-3. Intersection Verification
+2. Step-by-Step Process (includes Backtracking)
+3. Intersection Verification (includes Additional Placement Constraints)
 4. Example Walkthrough
 5. JSON Format
 
@@ -21,16 +21,48 @@ Building a valid crossword grid is the hardest part. The key constraint: **at ev
 1. Select 10 candidate words (see quality-guidelines.md for selection criteria)
 2. Include 2-3 "anchor" words (6-7 letters) and fill with 4-5 letter words
 3. Ensure the word list has enough shared letters to allow intersections
+4. No duplicate words allowed in the grid
 
-### Phase B: Build the Grid Incrementally
-1. **Place the first anchor word** across at row 0. This is the spine.
-2. **Place down words** that intersect the anchor. For each:
-   - Find a letter in the anchor word that matches a letter in the down word
-   - The down word's row starts at: `anchor_row - position_of_shared_letter_in_down_word`
-   - Verify the column position and that no other cells conflict
-3. **Place the second anchor word** across, intersecting one or more down words already placed. Verify every intersection.
-4. **Continue adding words**, always verifying intersections before finalizing.
-5. **Calculate grid size** from the bounding box of all placed words.
+### Phase A-2: Pre-validate Intersection Compatibility (do this BEFORE building)
+
+Before touching the grid, verify that your word list can actually connect. For each pair of words you intend to cross, check that a shared letter exists at compatible positions.
+
+**Scaffold compatibility check** (for the Two-Anchor pattern in Phase B):
+Given anchor1 (across, row 0) and anchor2 (across, row R), for each column c you plan to fill with a down word, verify:
+- `anchor1[c]` and `anchor2[c]` are known
+- At least one real English word exists that has `anchor1[c]` at position 0 and `anchor2[c]` at position R
+
+If you cannot find valid down words for 2+ columns, **swap one anchor word now** — do not proceed to Phase B with an unworkable word list. Maximum 2 anchor-pair swaps; if still stuck after that, restart Phase A entirely with a new theme or word set.
+
+### Phase B: Build the Grid — Two-Anchor Scaffold Pattern (recommended)
+
+This pattern eliminates most intersection failures by design:
+
+**1. Place Anchor1 across at row 0.**
+
+**2. Place Anchor2 across at row R (typically 3–5 rows below).**
+   - Choose R so that 5-letter down words can bridge the two rows (R = 4 gives 5-letter down words; R = 5 gives 6-letter down words).
+
+**3. For each column c in Anchor1, find a down word where:**
+   - `down_word[0] = Anchor1[c]`  (top letter matches Anchor1)
+   - `down_word[R] = Anchor2[c]`  (bottom letter matches Anchor2)
+   - Place it down at (0, c). Both intersections are guaranteed correct by construction.
+
+**4. Fill remaining words** (smaller across/down words) below or around the scaffold, verifying each intersection as in Section 3.
+
+**5. Calculate grid size** from the bounding box of all placed words.
+
+> **Why this works**: By choosing down words whose first and last letters are constrained to match the two anchors, you eliminate the most common failure mode (intersection mismatch). The internal letters of the down words are free, so finding valid English words is easy.
+
+### Phase B-2: Backtracking
+
+If a word cannot be placed without conflicts:
+1. Try a different position or orientation for that word (**maximum 3 attempts**).
+2. If no valid position exists after 3 attempts, **swap the word** for a different one with more cooperative letters — do not continue trying the same word.
+3. If an entire section resists clean fill, consider rebuilding from Phase A with a new word list.
+4. Never force an invalid intersection — it will fail validation.
+
+**Do not output intermediate states** during backtracking. Only output the final grid once all words are placed successfully.
 
 ### Phase C: Assign Clue Numbers
 - Scan cells left-to-right, top-to-bottom
@@ -54,9 +86,17 @@ For each letter position (i) in the new word:
 
 **Common mistake**: Forgetting that a down word placed at column X will occupy cells in rows Y through Y+len-1. If another across word crosses any of those rows at column X, the letters must match.
 
+### Additional Placement Constraints
+- **No duplicate words**: The same word must not appear twice in the grid.
+- **Adjacency check**: Two parallel words in adjacent rows/columns must not create unintended mini-words in the perpendicular direction unless those are valid entries.
+- **Minimize unchecked cells**: Every white cell should ideally belong to both an across and a down word. Cells in only one word give the solver no cross-checking help — minimize these.
+- **Adjacent white cells in the same row**: The validator does not reject adjacent white cells that belong to different across words (or to no across word). However, this is bad for solver UX — a solver cannot tell where one word ends and the next begins. Avoid placing words such that a down-only cell is horizontally adjacent to the end of an across word with no black cell separating them.
+
 ---
 
 ## 4. Example Walkthrough
+
+> **Note**: This example shows a simple linear build for clarity. In practice, you will often need to try multiple arrangements and backtrack when intersections don't work out. The example word list was chosen to work on the first try — real word lists usually require iteration.
 
 Goal: Build a grid with STORM, TIGER, SCRUB, BRIGHT, OKAPI.
 
