@@ -31,10 +31,22 @@ jobs:
             Generate a new crossword puzzle for ${{ steps.date.outputs.puzzle_date }} using the /generate-crossword skill.
 
             Follow the skill's 7-step workflow to create a high-quality puzzle.
-            After validation passes, commit with message "puzzle: add ${{ steps.date.outputs.puzzle_date }} daily puzzle".
+            Do NOT commit or push. Only generate and validate the puzzle file.
+          claude_args: "--max-turns 30"
 
-      - name: Push changes
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git push
+          PUZZLE_FILE="public/puzzles/${{ steps.date.outputs.puzzle_date }}.json"
+          if [ ! -f "$PUZZLE_FILE" ]; then
+            echo "Error: Puzzle file $PUZZLE_FILE was not generated"
+            exit 1
+          fi
+          git add "$PUZZLE_FILE"
+          if git diff --cached --quiet; then
+            echo "No changes to commit for $PUZZLE_FILE"
+          else
+            git commit -m "puzzle: add ${{ steps.date.outputs.puzzle_date }} daily puzzle"
+            git push
+          fi
