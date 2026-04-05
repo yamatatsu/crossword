@@ -1,0 +1,16 @@
+{
+  "date": "2026-04-05",
+  "size": { "rows": 11, "cols": 8 },
+  "words": [
+    { "id": 1, "word": "SPRING", "clue": "Leap forward, or the season after winter", "row": 0, "col": 0, "direction": "across" },
+    { "id": 2, "word": "RIVER", "clue": "Mississippi or Amazon, e.g.", "row": 0, "col": 2, "direction": "down" },
+    { "id": 3, "word": "GREEN", "clue": "Eco-friendly, or the color of fresh leaves", "row": 0, "col": 5, "direction": "down" },
+    { "id": 4, "word": "FLOWER", "clue": "Rose or tulip, e.g.", "row": 2, "col": 4, "direction": "down" },
+    { "id": 5, "word": "NEEDLE", "clue": "Sewing tool, or to tease persistently", "row": 3, "col": 0, "direction": "across" },
+    { "id": 6, "word": "EARTH", "clue": "Garden soil, or the third planet from the sun", "row": 3, "col": 1, "direction": "down" },
+    { "id": 7, "word": "STONE", "clue": "Rolling ___ gathers no moss", "row": 6, "col": 0, "direction": "across" },
+    { "id": 8, "word": "OLIVE", "clue": "Mediterranean tree with oil-rich fruit", "row": 6, "col": 2, "direction": "down" },
+    { "id": 9, "word": "RAIN", "clue": "Drops from storm clouds", "row": 6, "col": 5, "direction": "down" },
+    { "id": 10, "word": "TRAIL", "clue": "Hiking path through the woods", "row": 7, "col": 3, "direction": "across" }
+  ]
+}
