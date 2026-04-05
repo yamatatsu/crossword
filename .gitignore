@@ -29,3 +29,5 @@ dist-ssr
 /blob-report/
 /playwright/.cache/
 /.features-gen/
+
+.claude/settings.local.json
