@@ -1,0 +1,16 @@
+{
+  "date": "2026-04-06",
+  "size": { "rows": 6, "cols": 6 },
+  "words": [
+    { "id": 1, "word": "CHROME", "clue": "Shiny metallic finish, or the Google browser", "row": 0, "col": 0, "direction": "across" },
+    { "id": 1, "word": "CRAFTS", "clue": "Knitting and woodworking, e.g.", "row": 0, "col": 0, "direction": "down" },
+    { "id": 2, "word": "HENNA", "clue": "___ tattoo, a temporary body art", "row": 0, "col": 1, "direction": "down" },
+    { "id": 3, "word": "RAVEL", "clue": "Maurice ___, French composer of Bolero", "row": 0, "col": 2, "direction": "down" },
+    { "id": 4, "word": "OLIVE", "clue": "Mediterranean fruit pressed for cooking oil", "row": 0, "col": 3, "direction": "down" },
+    { "id": 5, "word": "MASON", "clue": "Stone craftsman, or a type of glass jar", "row": 0, "col": 4, "direction": "down" },
+    { "id": 6, "word": "ERECTS", "clue": "Puts up, as a monument or tent", "row": 0, "col": 5, "direction": "down" },
+    { "id": 7, "word": "REAL", "clue": "Genuine; not an imitation", "row": 1, "col": 0, "direction": "across" },
+    { "id": 8, "word": "TALENT", "clue": "Natural gift that practice can sharpen", "row": 4, "col": 0, "direction": "across" },
+    { "id": 9, "word": "STRESS", "clue": "Finals week feeling, or where to place the emphasis", "row": 5, "col": 0, "direction": "across" }
+  ]
+}
