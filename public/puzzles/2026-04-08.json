@@ -1,0 +1,86 @@
+{
+  "date": "2026-04-08",
+  "size": { "rows": 5, "cols": 6 },
+  "words": [
+    {
+      "id": 1,
+      "word": "BLASTS",
+      "clue": "Loud bursts; what a rocket does at liftoff",
+      "row": 0,
+      "col": 0,
+      "direction": "across"
+    },
+    {
+      "id": 7,
+      "word": "BONE",
+      "clue": "___ dry (completely without moisture)",
+      "row": 2,
+      "col": 2,
+      "direction": "across"
+    },
+    {
+      "id": 8,
+      "word": "EMERGE",
+      "clue": "Come out of hiding, as spring bears do",
+      "row": 3,
+      "col": 0,
+      "direction": "across"
+    },
+    {
+      "id": 9,
+      "word": "FARMER",
+      "clue": "One who tends crops and raises livestock",
+      "row": 4,
+      "col": 0,
+      "direction": "across"
+    },
+    {
+      "id": 1,
+      "word": "BRIEF",
+      "clue": "Short; or a lawyer's written summary",
+      "row": 0,
+      "col": 0,
+      "direction": "down"
+    },
+    {
+      "id": 2,
+      "word": "LLAMA",
+      "clue": "Woolly pack animal of the Andes",
+      "row": 0,
+      "col": 1,
+      "direction": "down"
+    },
+    {
+      "id": 3,
+      "word": "AMBER",
+      "clue": "In Jurassic Park, this preserved ancient DNA sources",
+      "row": 0,
+      "col": 2,
+      "direction": "down"
+    },
+    {
+      "id": 4,
+      "word": "STORM",
+      "clue": "Hurricane or blizzard, for one",
+      "row": 0,
+      "col": 3,
+      "direction": "down"
+    },
+    {
+      "id": 5,
+      "word": "TINGE",
+      "clue": "Blushing cheeks have a pink one",
+      "row": 0,
+      "col": 4,
+      "direction": "down"
+    },
+    {
+      "id": 6,
+      "word": "SHEER",
+      "clue": "Completely; or nearly vertical, as a cliff face",
+      "row": 0,
+      "col": 5,
+      "direction": "down"
+    }
+  ]
+}
