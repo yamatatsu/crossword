@@ -1,0 +1,86 @@
+{
+  "date": "2026-04-07",
+  "size": { "rows": 5, "cols": 6 },
+  "words": [
+    {
+      "id": 1,
+      "word": "FOREST",
+      "clue": "Robin Hood's Sherwood ___",
+      "row": 0,
+      "col": 0,
+      "direction": "across"
+    },
+    {
+      "id": 7,
+      "word": "VIA",
+      "clue": "By way of",
+      "row": 2,
+      "col": 2,
+      "direction": "across"
+    },
+    {
+      "id": 8,
+      "word": "GENRE",
+      "clue": "Horror or comedy, for one",
+      "row": 3,
+      "col": 1,
+      "direction": "across"
+    },
+    {
+      "id": 9,
+      "word": "DANGER",
+      "clue": "Hazard ahead",
+      "row": 4,
+      "col": 0,
+      "direction": "across"
+    },
+    {
+      "id": 1,
+      "word": "FRAUD",
+      "clue": "Con artist's specialty",
+      "row": 0,
+      "col": 0,
+      "direction": "down"
+    },
+    {
+      "id": 2,
+      "word": "OMEGA",
+      "clue": "Last letter of the Greek alphabet",
+      "row": 0,
+      "col": 1,
+      "direction": "down"
+    },
+    {
+      "id": 3,
+      "word": "RAVEN",
+      "clue": "Poe's uninvited bird",
+      "row": 0,
+      "col": 2,
+      "direction": "down"
+    },
+    {
+      "id": 4,
+      "word": "EKING",
+      "clue": "___ out a living",
+      "row": 0,
+      "col": 3,
+      "direction": "down"
+    },
+    {
+      "id": 5,
+      "word": "STARE",
+      "clue": "Gaze rudely",
+      "row": 0,
+      "col": 4,
+      "direction": "down"
+    },
+    {
+      "id": 6,
+      "word": "TIGER",
+      "clue": "___ Woods, legendary golfer",
+      "row": 0,
+      "col": 5,
+      "direction": "down"
+    }
+  ]
+}
