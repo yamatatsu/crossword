@@ -1,0 +1,86 @@
+{
+  "date": "2026-04-11",
+  "size": { "rows": 5, "cols": 6 },
+  "words": [
+    {
+      "id": 1,
+      "word": "SPRING",
+      "clue": "Season of renewal; or what a coiled mechanism does",
+      "row": 0,
+      "col": 0,
+      "direction": "across"
+    },
+    {
+      "id": 7,
+      "word": "PAID",
+      "clue": "Settled the bill",
+      "row": 1,
+      "col": 0,
+      "direction": "across"
+    },
+    {
+      "id": 8,
+      "word": "GLEE",
+      "clue": "Unbridled joy; or a Fox musical drama about a high school choir",
+      "row": 2,
+      "col": 2,
+      "direction": "across"
+    },
+    {
+      "id": 9,
+      "word": "GARDEN",
+      "clue": "___ of Eden",
+      "row": 4,
+      "col": 0,
+      "direction": "across"
+    },
+    {
+      "id": 1,
+      "word": "SPRIG",
+      "clue": "Small stem of herbs used as a garnish",
+      "row": 0,
+      "col": 0,
+      "direction": "down"
+    },
+    {
+      "id": 2,
+      "word": "PANDA",
+      "clue": "WWF mascot that munches bamboo",
+      "row": 0,
+      "col": 1,
+      "direction": "down"
+    },
+    {
+      "id": 3,
+      "word": "RIGOR",
+      "clue": "___ mortis",
+      "row": 0,
+      "col": 2,
+      "direction": "down"
+    },
+    {
+      "id": 4,
+      "word": "IDLED",
+      "clue": "Spent time doing nothing",
+      "row": 0,
+      "col": 3,
+      "direction": "down"
+    },
+    {
+      "id": 5,
+      "word": "NIECE",
+      "clue": "Brother's or sister's daughter",
+      "row": 0,
+      "col": 4,
+      "direction": "down"
+    },
+    {
+      "id": 6,
+      "word": "GREEN",
+      "clue": "Color of envy, as the saying goes",
+      "row": 0,
+      "col": 5,
+      "direction": "down"
+    }
+  ]
+}
