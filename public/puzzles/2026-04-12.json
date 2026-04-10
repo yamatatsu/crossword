@@ -1,0 +1,86 @@
+{
+  "date": "2026-04-12",
+  "size": { "rows": 5, "cols": 6 },
+  "words": [
+    {
+      "id": 1,
+      "word": "SPRING",
+      "clue": "Season of renewal; or what a coiled metal device does",
+      "row": 0,
+      "col": 0,
+      "direction": "across"
+    },
+    {
+      "id": 7,
+      "word": "CRANE",
+      "clue": "Paper ___ (traditional Japanese origami bird)",
+      "row": 1,
+      "col": 0,
+      "direction": "across"
+    },
+    {
+      "id": 8,
+      "word": "MAIDS",
+      "clue": "Honor ___ (wedding party members)",
+      "row": 3,
+      "col": 1,
+      "direction": "across"
+    },
+    {
+      "id": 9,
+      "word": "FOREST",
+      "clue": "Robin Hood's Sherwood, for one",
+      "row": 4,
+      "col": 0,
+      "direction": "across"
+    },
+    {
+      "id": 1,
+      "word": "SCARF",
+      "clue": "Colorful neckwear often knotted or draped",
+      "row": 0,
+      "col": 0,
+      "direction": "down"
+    },
+    {
+      "id": 2,
+      "word": "PROMO",
+      "clue": "Trailer or teaser clip, informally",
+      "row": 0,
+      "col": 1,
+      "direction": "down"
+    },
+    {
+      "id": 3,
+      "word": "RADAR",
+      "clue": "Acronym-turned-common-word used by airports and weather services",
+      "row": 0,
+      "col": 2,
+      "direction": "down"
+    },
+    {
+      "id": 4,
+      "word": "INDIE",
+      "clue": "Not signed to a major label, musically speaking",
+      "row": 0,
+      "col": 3,
+      "direction": "down"
+    },
+    {
+      "id": 5,
+      "word": "NERDS",
+      "clue": "Brainy obsessives, in affectionate slang",
+      "row": 0,
+      "col": 4,
+      "direction": "down"
+    },
+    {
+      "id": 6,
+      "word": "GHOST",
+      "clue": "Hamlet's father, for one",
+      "row": 0,
+      "col": 5,
+      "direction": "down"
+    }
+  ]
+}
